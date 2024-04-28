@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*
+    Module Özelliği
+    * Bütün kodlar style.scss dosyasında birikmesin ve kod 
+    * karmaşıklığına neden olmaması için bu dosya içerisinde
+    * header kodlarını tanımlarız.
+    * Bu dosyayı style.scss içerine import(dahil) ettik.
+    * Her oluşturduğumuz yan dosyanın ismi "_" işareti ile başlar .
+    * ama import ederken "_" işareti kullanmıyoruz.
+
+*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+header h1 {
+  letter-spacing: 3px;
+}
+header nav {
+  display: flex;
+  gap: 10px;
+}
+header nav a {
+  text-decoration: none;
+  color: #fff;
+}
+header .buttons {
+  display: flex;
+  gap: 10px;
+}
+header .buttons button {
+  padding: 8px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  color: #fff;
+  transition: all 0.3s;
+}
+header .buttons button:hover {
+  cursor: pointer;
+  background-color: rgb(106, 9, 29);
+  scale: 0.98;
+}
+
+/*
+    * Mixin yapısında javascriptteki fonksiyorlarda olduğu gibi
+    * bazı stilleri parametre olarak gönderebiliyoruz.
+*/
+#danger {
+  /*
+      * Mixin yapısında tanımladığımız stiller @include ile birlikte buraya çağırdık. 
+    */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  margin-top: 30px;
+  background-color: red;
+}
+
+#info {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  margin-top: 30px;
+  background-color: blue;
+}
+
+#warning {
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  margin-top: 30px;
+  background-color: yellow;
+}
+
+.card, #kart3, #kart2, #kart1 {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 60px auto;
+}
+
+/*
+    * Extend Özelliği
+    * Bir class/id a farklı bir class/id nin bütün özelliklerini
+    * miras alabiliyoruz(aktarabiliyoruz).
+    * Üzerine yeni özellikler ekleyebiliyoruz.
+
+*/
+#kart1 {
+  background-color: blueviolet;
+  color: black;
+}
+
+#kart2 {
+  background-color: brown;
+}
+
+#kart3 {
+  background-color: chocolate;
+}
+#kart3:hover {
+  background: white;
+  color: black;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer ul a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+footer ul a:hover {
+  color: orange;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/*
+    * nesting özelliği
+    * İç içe olan etiketleri daha kolay seçebiliriz.
+*/
+section {
+  background: gray;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+section div {
+  background: crimson;
+  padding: 10px;
+  border-radius: 10px;
+}
+section p {
+  background: crimson;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.table {
+  background: white;
+  color: black;
+  padding: 10px;
+  margin: 40px;
+}
+.table-head {
+  background-color: red;
+}
+.table-body {
+  background: green;
+}
+.table-foot {
+  background: orange;
+}/*# sourceMappingURL=style.css.map */

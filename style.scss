@@ -1,0 +1,62 @@
+@import "header";
+@import "mixin";
+@import "card";
+@import "footer";
+body {
+  background-color: black;
+  color: white;
+}
+
+// section {
+//   background: gray;
+//   padding: 10px;
+// }
+// section div {
+//   background: crimson;
+//   padding: 10px;
+//   border-radius: 10px;
+// }
+// section p {
+//   background: crimson;
+//   border-radius: 10px;
+//   padding: 10px;
+// }
+
+/*
+    * nesting özelliği
+    * İç içe olan etiketleri daha kolay seçebiliriz.
+*/
+section {
+  background: gray;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  div {
+    background: crimson;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  p {
+    background: crimson;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+// & işareti ile kapsayıcı elemanın ismini seçebiliyoruz.
+.table {
+  background: white;
+  color: black;
+  padding: 10px;
+  margin: 40px;
+  &-head {
+    background-color: red;
+  }
+  &-body {
+    background: green;
+  }
+  &-foot {
+    background: orange;
+  }
+}

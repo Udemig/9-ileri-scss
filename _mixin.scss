@@ -1,0 +1,26 @@
+/*
+    * Mixin yapısında javascriptteki fonksiyorlarda olduğu gibi
+    * bazı stilleri parametre olarak gönderebiliyoruz.
+*/
+@mixin alert($color: aqua, $pixel: 10px) {
+  padding: $pixel;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  margin-top: 30px;
+  background-color: $color;
+}
+
+#danger {
+  /*
+      * Mixin yapısında tanımladığımız stiller @include ile birlikte buraya çağırdık. 
+    */
+  @include alert($color: red);
+}
+#info {
+  @include alert($color: blue);
+}
+#warning {
+  color: black;
+
+  @include alert($color: yellow, $pixel: 20px);
+}

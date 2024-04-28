@@ -1,0 +1,33 @@
+.card {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 60px auto;
+}
+/*
+    * Extend Özelliği
+    * Bir class/id a farklı bir class/id nin bütün özelliklerini
+    * miras alabiliyoruz(aktarabiliyoruz).
+    * Üzerine yeni özellikler ekleyebiliyoruz.
+
+*/
+
+#kart1 {
+  @extend .card;
+  background-color: blueviolet;
+  color: black;
+}
+#kart2 {
+  @extend .card;
+  background-color: brown;
+}
+#kart3 {
+  @extend .card;
+  background-color: chocolate;
+  // & işareti >> içinde bulunduğumuz elemanı seçmeye yarar.
+  &:hover {
+    background: white;
+    color: black;
+  }
+}

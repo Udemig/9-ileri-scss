@@ -1,0 +1,60 @@
+/*
+    Module Özelliği
+    * Bütün kodlar style.scss dosyasında birikmesin ve kod 
+    * karmaşıklığına neden olmaması için bu dosya içerisinde
+    * header kodlarını tanımlarız.
+    * Bu dosyayı style.scss içerine import(dahil) ettik.
+    * Her oluşturduğumuz yan dosyanın ismi "_" işareti ile başlar .
+    * ama import ederken "_" işareti kullanmıyoruz.
+
+*/
+// değişken tanımlama
+$white: #fff;
+$red: crimson;
+// nesting(iç içe aktarma) örneği
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+
+  h1 {
+    letter-spacing: 3px;
+  }
+
+  nav {
+    display: flex;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    button {
+      padding: 8px 8px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background-color: $red;
+      color: $white;
+      transition: all 0.3s;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(106, 9, 29);
+        scale: 0.98;
+      }
+    }
+  }
+}
+// header nav {
+//   display: flex;
+//   gap: 10px;
+// }
+// header nav a {
+//   text-decoration: none;
+//   color: white;
+// }
